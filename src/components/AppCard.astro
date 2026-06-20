@@ -1,0 +1,120 @@
+---
+import ScreenshotCarousel from './ScreenshotCarousel.astro';
+
+interface App {
+  name: string;
+  description: string;
+  longDescription: string;
+  category: string;
+  icon: string;
+  screenshots: string[];
+  playStoreUrl: string;
+  isFree: boolean;
+}
+
+interface Props {
+  app: App;
+  index: number;
+}
+
+const { app, index } = Astro.props;
+const delay = Math.min(index * 100, 700);
+const cardId = `card-${app.name.toLowerCase().replace(/\s+/g, '-')}`;
+---
+
+<div
+  class="card opacity-0 animate-slide-up animation-fill-forwards"
+  style={`animation-delay: ${delay}ms`}
+  id={cardId}
+>
+  <button
+    class="w-full flex items-center gap-4 p-5 text-left cursor-pointer group/card"
+    aria-expanded="false"
+    aria-controls={`content-${cardId}`}
+    id={`trigger-${cardId}`}
+  >
+    <div class="relative shrink-0">
+      <img
+        src={app.icon}
+        alt={`${app.name} icon`}
+        class="w-14 h-14 rounded-xl object-cover shadow-md group-hover/card:scale-105 transition-transform bg-gray-100 dark:bg-gray-800"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-0.5">
+        <h3 class="text-base font-semibold text-gray-900 dark:text-white truncate">
+          {app.name}
+        </h3>
+        {app.isFree && (
+          <span class="shrink-0 text-[10px] font-medium px-1.5 py-0.5 rounded bg-accent-100 dark:bg-accent-900/40 text-accent-700 dark:text-accent-300">
+            FREE
+          </span>
+        )}
+      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 truncate">
+        {app.description}
+      </p>
+      <span class="inline-block mt-1 text-[11px] font-mono text-gray-400 dark:text-gray-500 tracking-wider uppercase">
+        {app.category}
+      </span>
+    </div>
+
+    <svg
+      class="w-5 h-5 text-gray-400 dark:text-gray-500 transition-transform duration-300 shrink-0"
+      id={`chevron-${cardId}`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <div
+    class="expandable-content"
+    id={`content-${cardId}`}
+    role="region"
+    aria-labelledby={`trigger-${cardId}`}
+  >
+    <div>
+      <div class="px-5 pb-5 space-y-4">
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          {app.longDescription}
+        </p>
+
+        <!-- <ScreenshotCarousel screenshots={app.screenshots} appName={app.name} /> -->
+
+        <a
+          href={app.playStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 hover:scale-105 active:scale-95 text-sm font-medium"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.581l2.807 1.626a1 1 0 010 1.731l-2.807 1.626L15.206 12l2.492-2.874zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+          </svg>
+          Get on Google Play
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ cardId }}>
+  (function() {
+    const trigger = document.getElementById(`trigger-${cardId}`);
+    const content = document.getElementById(`content-${cardId}`);
+    const chevron = document.getElementById(`chevron-${cardId}`);
+
+    if (trigger && content && chevron) {
+      trigger.addEventListener('click', () => {
+        const isOpen = content.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+        chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+      });
+    }
+  })();
+</script>

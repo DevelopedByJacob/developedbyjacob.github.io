@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Checkers",
+    "description": "Classic game to play locally",
+    "longDescription": "Enjoy the classic game of checkers with a simple, distraction-free experience, perfect for local play.",
+    "category": "Board games",
+    "icon": "/icons/checkers.png",
+    "screenshots": [
+      "/screenshots/checkers-1.png",
+      "/screenshots/checkers-2.png",
+      "/screenshots/checkers-3.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.checkers",
+    "isFree": true
+  },
+  {
+    "name": "Clean Sudoku",
+    "description": "Just a Sudoku game",
+    "longDescription": "Clean Sudoku is a simple and relaxing Sudoku game designed for players who want a clear, clean, and distraction-free experience.",
+    "category": "Puzzles",
+    "icon": "/icons/clean-sudoku.png",
+    "screenshots": [
+      "/screenshots/clean-sudoku-1.png",
+      "/screenshots/clean-sudoku-2.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.cleansudoku",
+    "isFree": true
+  },
+  {
+    "name": "Simple Pill Reminder",
+    "description": "Never miss a dose.",
+    "longDescription": "Pill Reminder helps you keep track of your medication with smart notifications, an intuitive interface, and tracking tools.ule, and maintain a log of your compliance. Keep your health on track with this easy-to-use app.",
+    "category": "Health",
+    "icon": "/icons/simple-pill-reminder.png",
+    "screenshots": [
+      "/screenshots/simple-pill-reminder-1.png",
+      "/screenshots/simple-pill-reminder-2.png",
+      "/screenshots/simple-pill-reminder-3.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.simplepillreminder",
+    "isFree": true
+  },
+  {
+    "name": "Organize me",
+    "description": "Organize your day",
+    "longDescription": "Organize Me is a simple and straightforward app for organizing your daily tasks without unnecessary complexity.",
+    "category": "Productivity",
+    "icon": "/icons/organize-me.png",
+    "screenshots": [
+      "/screenshots/organize-me-1.png",
+      "/screenshots/organize-me-2.png",
+      "/screenshots/organize-me-3.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.OrganizeMe",
+    "isFree": true
+  },
+  {
+    "name": "Chess: Learn and play",
+    "description": "Classic game plus some training",
+    "longDescription": "Chess: Learn and Play is your complete chess companion, no internet required, fully offline",
+    "category": "Board games",
+    "icon": "/icons/chess.png",
+    "screenshots": [
+      "/screenshots/motion-fit-1.png",
+      "/screenshots/motion-fit-2.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.chess",
+    "isFree": true
+  },
+  {
+    "name": "Simple Balance",
+    "description": "Track your expenses",
+    "longDescription": "Simple balance helps you track your income and expenses in a clear and simple way",
+    "category": "Finances",
+    "icon": "/icons/simple-balance.png",
+    "screenshots": [
+      "/screenshots/daily-digest-1.png",
+      "/screenshots/daily-digest-2.png",
+      "/screenshots/daily-digest-3.png"
+    ],
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.developedbyjacob.gastos",
+    "isFree": true
+  }
+]

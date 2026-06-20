@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent-400/30 text-gray-900 dark:text-white;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  .card {
+    @apply rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm hover:shadow-lg transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-500 via-accent-400 to-emerald-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-accent-500/10 via-transparent to-emerald-400/10;
+  }
+
+  .btn-glow {
+    @apply relative inline-flex items-center justify-center px-7 py-3 rounded-full text-white font-semibold text-base transition-all duration-300;
+    background: linear-gradient(135deg, #3ddc84, #22c55e, #10b981, #3ddc84);
+    background-size: 300% 300%;
+    animation: gradientShift 4s ease infinite;
+    box-shadow: 0 0 25px rgba(61, 220, 132, 0.25), 0 4px 16px rgba(61, 220, 132, 0.15);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 45px rgba(61, 220, 132, 0.45), 0 8px 24px rgba(61, 220, 132, 0.25);
+    transform: scale(1.05);
+  }
+
+  .btn-glow:active {
+    transform: scale(0.97);
+  }
+
+  /* Typewriter cursor */
+  .typewriter-cursor::after {
+    content: '|';
+    animation: blink 0.8s steps(1) infinite;
+    @apply text-accent-500 font-light;
+  }
+
+  /* Floating icons */
+  .floating-icon {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  /* Scroll progress */
+  #scroll-progress {
+    transition: width 0.1s linear;
+    will-change: width;
+  }
+
+  /* Smooth expand/collapse using grid trick */
+  .expandable-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+  }
+
+  .expandable-content.open {
+    grid-template-rows: 1fr;
+  }
+
+  .expandable-content > div {
+    overflow: hidden;
+  }
+
+  /* Carousel */
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animation-fill-forwards {
+    animation-fill-mode: forwards;
+  }
+}

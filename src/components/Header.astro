@@ -1,0 +1,32 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50">
+  <nav class="container-app flex items-center justify-between h-16">
+    <a href="https://play.google.com/store/search?q=developedbyjacob&c=apps" class="flex items-center gap-2 group notranslate" aria-label="Home">
+      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-500 to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-accent-500/20 group-hover:scale-105 transition-transform">
+        J
+      </span>
+      <span class="notranslate text-sm font-medium text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors hidden sm:inline">
+        Developed by <strong class="text-gray-900 dark:text-white">Jacob</strong>
+      </span>
+    </a>
+
+    <div class="flex items-center gap-1">
+      <a
+        href="#apps"
+        class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors px-3 py-2 hidden sm:inline"
+      >
+        Apps
+      </a>
+      <a
+        href="#about"
+        class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors px-3 py-2 hidden sm:inline"
+      >
+        About
+      </a>
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>
