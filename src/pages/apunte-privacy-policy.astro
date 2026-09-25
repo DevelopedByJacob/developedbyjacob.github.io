@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — Apunte"
+  description="Privacy Policy for the Apunte application developed by developedbyjacob."
+>
+  <section class="pt-28 pb-16 md:pt-32 md:pb-24">
+    <div class="container-app max-w-3xl">
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors mb-8"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to portfolio
+      </a>
+
+      <span class="text-accent-600 dark:text-accent-400 font-mono text-xs tracking-widest uppercase notranslate">
+        Legal
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4">
+        Privacy Policy
+      </h1>
+      <p class="text-gray-600 dark:text-gray-400 mb-2">
+        <span class="notranslate">Apunte</span>
+      </p>
+      <p class="text-sm text-gray-500 dark:text-gray-500 notranslate">
+        Last updated: September 25, 2026
+      </p>
+
+      <div class="prose-policy mt-10 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p>
+          This Privacy Policy explains how <span class="notranslate">developedbyjacob</span>
+          handles information related to the use of the
+          <span class="notranslate">Apunte</span> application, hereinafter the “Application”.
+        </p>
+        <p>
+          In short: the Application works entirely offline. It has no user accounts, no servers, no advertising,
+          and no analytics or tracking. Everything the user writes stays on their device.
+        </p>
+        <p>By using the Application, the user accepts the practices described in this Privacy Policy.</p>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">1. Application controller</h2>
+          <p>Developer: <span class="notranslate">developedbyjacob</span></p>
+          <p>Contact email: <a href="mailto:kiktruedeveloper@gmail.com" class="text-accent-700 dark:text-accent-400 hover:underline notranslate">kiktruedeveloper@gmail.com</a></p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">2. Information entered in the Application</h2>
+          <p>The Application allows users to create notes made of text, checklists, drawings, and images; organize them into folders and tags; pin, archive, and delete them; and set reminders.</p>
+          <p class="mt-3">To provide these features, the Application stores the following information on the device:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>The content of notes: text, checklists, drawings, and attached images.</li>
+            <li>Folders, tags, and the pinned, archived, or deleted status of each note.</li>
+            <li>Times configured for reminders.</li>
+            <li>Appearance preferences, such as theme, accent color, and background.</li>
+            <li>Encrypted content of private notes and the data needed to verify the PIN (see section 5).</li>
+          </ul>
+          <p class="mt-3">This information is stored locally in the Application's private storage on the user's device and is never sent to servers operated by the developer or by third parties. The Application does not require an account or registration. The developer cannot access, view, or retrieve the notes saved by the user.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3. Camera and images</h2>
+          <p>The user can add images to notes by taking a photo with the camera or selecting an existing image from the device's gallery. To do so, the Application may request access to the camera or use the Android image picker.</p>
+          <p class="mt-3">Access is only used when the user explicitly chooses to add an image. Only the images selected or taken by the user are copied into the Application's local storage; the Application does not browse, read, or upload the rest of the user's photos.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4. Reminders and notifications</h2>
+          <p>The Application allows users to schedule reminders for notes. To do so, it may request permission to show notifications. This permission is used solely to display reminders configured by the user.</p>
+          <p class="mt-3">Reminders are scheduled and managed locally on the device through Android's notification system. The user can modify or disable notifications in the Application or in Android settings.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5. Private notes and PIN</h2>
+          <p>The user can protect notes with a PIN. The content and attachments of private notes are encrypted on the device using AES-GCM, with a key derived from the PIN using PBKDF2-SHA-256.</p>
+          <p class="mt-3">The PIN itself is not stored. Because of this, if the user forgets the PIN, neither the user nor the developer can recover the content of private notes.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6. Home screen widget</h2>
+          <p>The Application offers an optional Android home screen widget that can show pinned notes and provide quick access to create new notes. Private notes are never shown in the widget.</p>
+          <p class="mt-3">Content shown in the widget is visible to anyone who can see the device's home screen. The user decides whether to add the widget and can remove it at any time.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7. Backups and sharing</h2>
+          <p>The Application's data is excluded from Android's automatic cloud backup, so notes are not copied to the user's Google account by the Application.</p>
+          <p class="mt-3">If the Application offers features to export a backup or share content, they only run when explicitly requested by the user. Exported files are saved to the location selected by the user or shared through the applications available on their device. Private notes remain encrypted inside exported backups. The developer does not receive a copy of exported or shared files, and processing by the services the user chooses is subject to their own privacy policies.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">8. Advertising, analytics, and tracking</h2>
+          <p>The Application does not display advertisements, does not include analytics or crash-reporting SDKs, does not use advertising identifiers, and does not track the user's activity inside or outside the Application.</p>
+          <p class="mt-3">If the user opens a link included in a note, it is opened in the browser or application chosen by the user, and is subject to that service's privacy policy.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">9. Purpose of processing</h2>
+          <p>The information described in this Policy is used only to:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Provide the note-taking and organization features.</li>
+            <li>Show reminders configured by the user.</li>
+            <li>Protect private notes with encryption.</li>
+            <li>Display the home screen widget.</li>
+            <li>Apply the user's appearance preferences.</li>
+          </ul>
+          <p class="mt-3">The developer does not collect, sell, or share any user data.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">10. Data retention and deletion</h2>
+          <p>Notes and settings remain on the device until the user:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Deletes notes and empties the trash within the Application.</li>
+            <li>Clears the Application's data in Android settings.</li>
+            <li>Uninstalls the Application.</li>
+          </ul>
+          <p class="mt-3">Because the developer does not receive or store any data on its own servers, it cannot delete it remotely or recover it after it has been deleted.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">11. Security</h2>
+          <p>The Application stores data in its private storage, protected by Android's application sandbox, and encrypts private notes as described in section 5. However, no electronic system can guarantee absolute security. Users are advised to protect their device with a password, PIN, pattern, fingerprint, or another locking method.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">12. Children</h2>
+          <p>The Application is not specifically designed for children and does not collect personal information from anyone, including minors.</p>
+          <p class="mt-3">If a parent or guardian has any questions, they may contact the developer using the email address indicated in this Policy.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">13. Third-party services</h2>
+          <p>The Application does not integrate third-party services that process user data. It only interacts with:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Google Play, for distribution and updates of the Application.</li>
+            <li>Android system services for the camera, image picker, notifications, storage, widgets, and sharing.</li>
+            <li>Applications voluntarily selected by the user to open links or share files.</li>
+          </ul>
+          <p class="mt-3">Processing performed by these services is governed by their own privacy policies and terms of use.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">14. User rights and control</h2>
+          <p>The user has full control over the data stored on their device and can view, modify, or delete it from the Application at any time.</p>
+          <p class="mt-3">The user can also:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Revoke camera or notification permissions in Android settings.</li>
+            <li>Remove the home screen widget.</li>
+            <li>Clear the Application's data.</li>
+            <li>Uninstall the Application.</li>
+          </ul>
+          <p class="mt-3">For any privacy-related questions, the user can contact the developer at <a href="mailto:kiktruedeveloper@gmail.com" class="text-accent-700 dark:text-accent-400 hover:underline notranslate">kiktruedeveloper@gmail.com</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">15. Changes to this Privacy Policy</h2>
+          <p>This Privacy Policy may be updated when new features, external services, or legal changes are introduced. The date of the last update will appear at the beginning of the document. Users are advised to review this Policy periodically to learn about any changes.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">16. Contact</h2>
+          <p>For questions, requests, or concerns related to this Privacy Policy, you can use the following email address:</p>
+          <p class="mt-3">
+            <a href="mailto:kiktruedeveloper@gmail.com" class="inline-flex items-center gap-2 text-accent-700 dark:text-accent-400 hover:underline font-medium notranslate">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              kiktruedeveloper@gmail.com
+            </a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
