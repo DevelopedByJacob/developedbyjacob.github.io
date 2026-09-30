@@ -28,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="notranslate">Apunte</span>
       </p>
       <p class="text-sm text-gray-500 dark:text-gray-500 notranslate">
-        Last updated: September 25, 2026
+        Last updated: September 26, 2026
       </p>
 
       <div class="prose-policy mt-10 space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -90,7 +90,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <section>
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7. Backups and sharing</h2>
           <p>The Application's data is excluded from Android's automatic cloud backup, so notes are not copied to the user's Google account by the Application.</p>
-          <p class="mt-3">If the Application offers features to export a backup or share content, they only run when explicitly requested by the user. Exported files are saved to the location selected by the user or shared through the applications available on their device. Private notes remain encrypted inside exported backups. The developer does not receive a copy of exported or shared files, and processing by the services the user chooses is subject to their own privacy policies.</p>
+          <p class="mt-3">The user can export a backup file from the settings and import it later, for example on a new device. Exporting only happens when explicitly requested by the user: the file is shared through the Android share menu and saved to the location or application the user chooses. Private notes remain encrypted inside exported backups and require the same PIN after restoring. Importing a backup replaces the data currently stored in the Application, after asking the user for confirmation.</p>
+          <p class="mt-3">The developer does not receive a copy of exported files. When the user saves or shares a backup through another application or service, such as a cloud storage provider, its processing is subject to that service's privacy policy.</p>
         </section>
 
         <section>
@@ -138,7 +139,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">13. Third-party services</h2>
           <p>The Application does not integrate third-party services that process user data. It only interacts with:</p>
           <ul class="list-disc pl-6 mt-3 space-y-1">
-            <li>Google Play, for distribution and updates of the Application.</li>
+            <li>Google Play, for distribution and updates of the Application, and to open the store pages of other applications by the developer when the user taps them in the settings. No information is sent when doing so, other than what Google Play itself receives when a store page is opened.</li>
             <li>Android system services for the camera, image picker, notifications, storage, widgets, and sharing.</li>
             <li>Applications voluntarily selected by the user to open links or share files.</li>
           </ul>
