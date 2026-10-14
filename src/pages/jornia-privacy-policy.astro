@@ -66,12 +66,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3. Notifications</h2>
           <p>While a shift is in progress, the Application shows an ongoing notification with the elapsed time and a button to clock out. To do so, it may request permission to show notifications.</p>
           <p class="mt-3">The Application also uses the device startup event to restore that notification after a restart if a shift is still open. Notifications are generated locally and are not used for advertising.</p>
+          <p class="mt-3">Premium users can turn on reminders: a warning when a shift has been open for longer than a chosen time, and a reminder to clock in at a chosen time on selected days. Reminders are scheduled and shown on the device using Android's task scheduler; no information is sent to the developer to provide them.</p>
+          <p class="mt-3">The home screen widget and the Quick Settings button display the current shift and today's and this week's hours on the device. They read the same local data as the Application and do not send it anywhere.</p>
           <p class="mt-3">The user can modify or disable notifications in the Android settings.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4. Backup copies and data export</h2>
-          <p>The Application allows users to export a backup file, import it again, and export their shifts in CSV format. These actions only take place when explicitly requested by the user. Files are saved to the location the user selects through the Android file picker, which may be local storage or a cloud service installed on the device.</p>
+          <p>The Application allows users to export a backup file, import it again, export their shifts in CSV format and, with Premium, create PDF timesheets. These actions only take place when explicitly requested by the user. Files are saved to the location the user selects through the Android file picker, which may be local storage or a cloud service installed on the device.</p>
           <p class="mt-3">The developer does not receive a copy of exported files. When the user saves or shares a file with another application or service, the subsequent processing of that file is subject to the privacy policy of the selected service.</p>
           <p class="mt-3">If Android backup is enabled on the device, the Application's data may be included in the automatic backup that Android makes to the user's Google account, and in device-to-device transfers. This backup is managed by Google and Android, not by the developer, and can be disabled in the device settings.</p>
         </section>
@@ -101,9 +103,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <section>
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7. Premium purchases</h2>
-          <p>The Application may offer Premium features, such as removing advertisements or unlocking additional features, through a one-time purchase or a subscription. Purchases are processed exclusively by <span class="notranslate">Google Play</span> through its billing system.</p>
+          <p>The Application may offer Premium features, such as removing advertisements, PDF timesheets and reminders, through a one-time purchase. Purchases are processed exclusively by <span class="notranslate">Google Play</span> through its billing system.</p>
           <p class="mt-3">The developer does not receive or store payment card details, bank details, or billing addresses. The Application only receives from Google Play the information needed to confirm the purchase, such as the purchased product, its status, and a purchase token, in order to unlock the corresponding features on the device.</p>
-          <p class="mt-3">Payments, subscription renewals, cancellations, and refunds are managed by Google Play under its own terms and privacy policy. Subscriptions can be cancelled at any time from the Google Play subscriptions section.</p>
+          <p class="mt-3">Payments and refunds are managed by Google Play under its own terms and privacy policy.</p>
         </section>
 
         <section>
@@ -112,7 +114,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <ul class="list-disc pl-6 mt-3 space-y-1">
             <li>Record shifts and calculate worked hours, breaks, overtime, and earnings.</li>
             <li>Show weekly and monthly summaries and history.</li>
-            <li>Show the ongoing shift notification.</li>
+            <li>Show the ongoing shift notification, the home screen widget and the Quick Settings button.</li>
+            <li>Show the reminders configured by Premium users.</li>
             <li>Enable voluntary backups, imports, and exports.</li>
             <li>Display and measure advertisements through Google AdMob.</li>
             <li>Verify Premium purchases made through Google Play.</li>
@@ -137,7 +140,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <section>
           <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">10. Security</h2>
           <p>The Application uses the storage and security mechanisms provided by Android. However, no electronic system can guarantee absolute security. Users are advised to protect their device with a password, PIN, pattern, fingerprint, or another locking method.</p>
-          <p class="mt-3">Exported backup and CSV files are not encrypted by the Application. Users should store them in a safe location.</p>
+          <p class="mt-3">Exported backup, CSV and PDF files are not encrypted by the Application. Users should store them in a safe location.</p>
           <p class="mt-3">Data transmitted by the Google Mobile Ads SDK and Google Play is sent over encrypted connections.</p>
         </section>
 

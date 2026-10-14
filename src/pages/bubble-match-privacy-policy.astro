@@ -2,34 +2,42 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Bubble Match — Privacy Policy">
+<BaseLayout title="Popple — Privacy Policy">
   <section class="container-app py-12 max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Privacy Policy — Bubble Match</h1>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Privacy Policy — Popple</h1>
     <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
-      Last updated: <span class="notranslate">July 2, 2026</span>
+      Last updated: <span class="notranslate">October 14, 2026</span>
     </p>
 
     <div class="prose dark:prose-invert space-y-6 text-gray-700 dark:text-gray-300">
       <section>
         <h2 class="text-xl font-semibold mt-6 mb-2">1. Overview</h2>
         <p>
-          Bubble Match is a single-player offline game developed by Jacob. This policy
-          explains what data the app handles.
+          Popple (formerly Bubble Match) is a single-player chain-reaction
+          puzzle game developed by Jacob. It has no accounts, no sign-in and no
+          servers of its own. This policy explains what data the app handles.
         </p>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold mt-6 mb-2">2. Data we collect</h2>
         <p>
-          <strong>Locally on your device:</strong> your game progress (high score,
-          gems, power-ups, statistics) and your settings (sound, vibration, language).
-          This data never leaves your device unless you choose to.
+          <strong>Locally on your device:</strong> your game progress (daily puzzle
+          results, streak, Adventure levels passed, practice position and jokers) and
+          your settings (sound, vibration, daily reminder). We, the developer, never
+          receive this data.
+        </p>
+        <p>
+          <strong>Android backup:</strong> if backup is turned on in your phone's
+          settings, Android may include this game progress in your device backup,
+          so it can be restored on a new phone. That backup is stored and managed
+          by Google under your Google account; we have no access to it.
         </p>
         <p>
           <strong>Through third-party advertising (Google AdMob):</strong> when an
-          ad is shown, Google may collect a device advertising identifier, coarse
-          (IP-based) location, device information, and ad interaction data. See
-          section 4 below.
+          ad is loaded or shown, Google may collect a device advertising identifier,
+          coarse (IP-based) location, device information, and ad interaction data.
+          See section 4 below.
         </p>
       </section>
 
@@ -45,7 +53,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </li>
           <li>
             <code class="notranslate">VIBRATE</code> — used for haptic feedback on
-            bubble matches and game over.
+            big chain reactions.
+          </li>
+          <li>
+            <code class="notranslate">POST_NOTIFICATIONS</code> — optional, for the
+            daily reminder (see section 6). You can refuse it or turn the reminder off
+            in the game settings.
+          </li>
+          <li>
+            <code class="notranslate">AD_ID</code> — lets the ad SDK read the
+            device advertising identifier.
           </li>
         </ul>
       </section>
@@ -53,9 +70,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <section>
         <h2 class="text-xl font-semibold mt-6 mb-2">4. Third-party services: Google AdMob</h2>
         <p>
-          Bubble Match displays ads provided by
-          <strong>Google AdMob</strong>. AdMob is operated by Google LLC and is
-          subject to Google's own privacy practices.
+          Popple shows <strong>rewarded ads</strong> provided by
+          <strong>Google AdMob</strong>, and only when you choose to watch one (for
+          example, to get an extra tap in Adventure). AdMob is operated by Google
+          LLC and is subject to Google's own privacy practices. The app asks Google
+          for ads suitable for a general audience.
+        </p>
+        <p>
+          <strong>Consent:</strong> in the European Economic Area, the UK and
+          Switzerland, the app shows Google's consent form before any ad is
+          requested, and ads are only personalised if you agree. You can change your
+          choice at any time from the game's Settings &rarr; Privacy options.
         </p>
         <p>When an ad is loaded or shown, Google may automatically receive:</p>
         <ul class="list-disc pl-6 space-y-1">
@@ -100,26 +125,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold mt-6 mb-2">5. Children</h2>
+        <h2 class="text-xl font-semibold mt-6 mb-2">5. Sharing your results</h2>
         <p>
-          The app is suitable for all ages. Google AdMob is configured to serve
-          ads appropriate for all audiences. We do not knowingly collect personal
-          data from children.
+          When you tap "Share" after solving the daily puzzle, the app builds a
+          short text (puzzle number, taps, a grid of emojis and a link to the game)
+          and hands it to the app you pick, such as a messaging app. Nothing is sent
+          unless you choose to share, and we never see what you share.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold mt-6 mb-2">6. Your rights</h2>
+        <h2 class="text-xl font-semibold mt-6 mb-2">6. Daily reminder</h2>
+        <p>
+          If you allow notifications, the app shows one notification in the evening
+          when today's puzzle is still unsolved. It is scheduled and decided on your
+          device; nothing is sent to a server. Turn it off in the game's Settings.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mt-6 mb-2">7. Children</h2>
+        <p>
+          Popple is intended for players aged 13 and over and is not directed at
+          children. We do not knowingly collect personal data from children under 13.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mt-6 mb-2">8. Your rights</h2>
         <p>
           You can erase all local data at any time by clearing the app's storage
-          in Android Settings &rarr; Apps &rarr; Bubble Match &rarr; Storage &rarr;
-          Clear data. For data Google has collected through ads, use Google's
-          Ads Settings and Privacy controls linked above.
+          in Android Settings &rarr; Apps &rarr; Popple &rarr; Storage &rarr;
+          Clear data, or by uninstalling the app. Device backups are managed in
+          your Android and Google account settings. For data Google has collected
+          through ads, use Google's Ads Settings and Privacy controls linked above.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold mt-6 mb-2">7. Changes to this policy</h2>
+        <h2 class="text-xl font-semibold mt-6 mb-2">9. Changes to this policy</h2>
         <p>
           Any updates to this policy will be reflected on this page with a revised
           "Last updated" date.
@@ -127,7 +171,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold mt-6 mb-2">8. Contact</h2>
+        <h2 class="text-xl font-semibold mt-6 mb-2">10. Contact</h2>
         <p>
           Questions? Email
           <a
